@@ -1,2 +1,2 @@
 # Node Practice PARTY
-node practice in Javascript 
+i hate you vim node practice in Javascript 

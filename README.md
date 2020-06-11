@@ -1,2 +1,3 @@
 # Node Practice PARTY
-node practice in Javascript 
+node practice in Javascript
+VIMMM HELL-O 

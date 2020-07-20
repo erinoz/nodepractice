@@ -4,36 +4,38 @@
 
  // User input
 const userInput = 10;
-const userInput2 = "sum";
+const userInput2 = "add";
 
 // Setting count to zero because we all start somewhere
 let count = 0;
 
 // In cases where it's a product, the count needs to be 1 because multiplying by zero = fail
-if (userInput2 === "product") {
+if (userInput2 === "product" || userInput2 === "times") {
     count = 1;
 }
-
 // Function station
-const incrementAndDisplayCount = (count, i) => {
+const checkCount = (count, i) => {
     count += i;
     console.log(`adding = ${i}`)
     console.log(`count is currently` , count)
     return count; 
 }
-
-// Looping through the numbers 1 through userInput
+// Switch case version of Problem 6 
 for (let i = 1; i <= userInput; i++) {
-    if (userInput2 === 'sum') {
-        count = incrementAndDisplayCount(count, i)
-    } if (userInput2 === 'product') {
-        console.log(`adding = ${i}`)
-        count *= i;
-        console.log(`count is currently` , count)
-    } else {
-
+    switch (userInput2) {
+        case 'add':
+        case 'sum': 
+            count = checkCount(count, i)
+            break;
+        case 'product':
+        case 'times':
+            console.log(`adding = ${i}`)
+            count *= i;
+            console.log(`count is currently` , count)
+            break;
+        default:
+            console.log('You broke it');   
     }
 }
-console.log(`count = ${count}`)
 
-console.log('a\nb\nc\n');
+console.log(`count = ${count}`)

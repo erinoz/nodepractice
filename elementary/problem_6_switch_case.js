@@ -25,7 +25,7 @@ for (let i = 1; i <= userInput; i++) {
     switch (userInput2) {
         case 'add':
         case 'sum': 
-            count = checkCount(count, i)
+            count = incrementAndDisplayCount(count, i)
             break;
         case 'product':
         case 'times':

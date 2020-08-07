@@ -3,9 +3,6 @@
 printing all primes up to the largest number you can easily represent is fine too.)
 */
 
-// 1 1 1 1 1 1 1 1 
-// 128 64 32 16 8 4 2 1  1 bit = 8 bytes 
-
 // Function station 
 
 const incrementAndDisplayCount = (count, i) => {

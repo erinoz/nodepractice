@@ -14,7 +14,7 @@
 // Setting variables
 let result = '';
 
-// Two for loops with an if/else statement
+// Two for loops
 for (let i = 1; i <= 3; i++) {
 
     for (let j = 1; j <= 3; j++) {

@@ -33,17 +33,17 @@ const reverseListNotInPlace = (originalArray) => {
   console.log(reverseListNotInPlace(originalArray))
 
   const reverseListInPlace = (originalArray) => {
-      let pointerOne = 0;
-      let pointerTwo = originalArray.length -1; 
-    while ()
+    let pointerOne = 0;
+    let pointerTwo = originalArray.length -1; 
+  while ()
 
-  }
+}
 
-  while pointerone is less than pointerTwo 
-  save one of the items (first or last) in a temporary variable 
-  then say originalArray[pointerOne] = the element of the array, originalArray[pointerTwo] = something else
-  increment pointerOne
-  decrement pointerTwo
+while pointerone is less than pointerTwo 
+save one of the items (first or last) in a temporary variable 
+then say originalArray[pointerOne] = the element of the array, originalArray[pointerTwo] = something else
+increment pointerOne
+decrement pointerTwo
 
 thing at pointerone = thing at pointerTwo
 pointerTwo needs to become the temporary thing that was at pointerOnebut isn't anymore 

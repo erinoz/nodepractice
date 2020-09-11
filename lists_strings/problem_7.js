@@ -41,3 +41,5 @@ const returnSumWhile = (inputArray) => {
 
 console.log(returnSumWhile([1, 2, 3]))
 
+// Function 3 - Recursion
+// TODO: Run all tests on functions 1 & 2

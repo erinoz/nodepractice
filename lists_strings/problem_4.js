@@ -1,30 +1,23 @@
 /* Write a function that returns the elements on odd positions in a list.
 */
 
+let inputArray = [0, 1]
 
-const returnLargestElement = (input) => {
-    let largest
-    for (i = 0; i < input.length; i++) {
-
-        for (j = 0; j < input.length; j++) {
-            if (input[i] < largest && input[j] < largest) {
-                // do nothing!
-            }
-            else if (input[i] > input[j]) {
-                largest = input[i];
-            } 
-            else if (input[i] < input[j]) {
-                largest = input[j];
-            }
-            else if (input[i] === input[j]) {
-                largest = input[i];
-            }
-            // console.log("input i", input[i]) 
-            // console.log("input j", input[j])
-        }
+const returnOddElements = (inputArray) => {
+    let oddElementsArray = [];
+    for (i = 1; i < inputArray.length; i+=2) {        
+        oddElementsArray.push(inputArray[i]);
     }
-    console.log(largest);
-    // return largest;
+    return oddElementsArray
 }
 
-returnLargestElement([1, -7, 5])
+console.log(returnOddElements(inputArray))
+
+// const returnOddElements = (originalArray) => {
+//     let reverseArray = []; 
+//     let i = originalArray.length - 1; 
+//     for (i; i >= 0; i--) {
+//         reverseArray.push(originalArray[i])
+//     }
+//     return reverseArray
+//   }

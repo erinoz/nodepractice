@@ -42,4 +42,15 @@ const returnSumWhile = (inputArray) => {
 console.log(returnSumWhile([1, 2, 3]))
 
 // Function 3 - Recursion
+
+const returnSumRecursive = (inputArray) => {
+    let sum
+    if (inputArray.length === 0) {
+        return
+    }
+    console.log(sum);
+    returnSumRecursive(sum += inputArray.pop);
+}
+
+console.log(returnSumRecursive([1, 2, 3]))
 // TODO: Run all tests on functions 1 & 2

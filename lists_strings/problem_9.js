@@ -18,5 +18,6 @@ const concatLists = (listOne, listTwo) => {
     return newList
 }
 
-console.log(concatLists(['a', 'b', 'c'], [1, 2, 3]))
+console.log(concatLists([], [1]))
 
+// TODO: If there are 0 items in listOne, how to get rid of the comma? (do we care?) 

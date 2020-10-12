@@ -23,7 +23,7 @@ const returnSumFor = (inputArray) => {
     return sum
 }
 
-console.log(returnSumFor([1, 2, 3]))
+// console.log(returnSumFor([1, 2, 3]))
 
 
 // Function 2 - while loop
@@ -39,18 +39,29 @@ const returnSumWhile = (inputArray) => {
     return sum
 }
 
-console.log(returnSumWhile([1, 2, 3]))
+// console.log(returnSumWhile([1, 2, 3]))
 
 // Function 3 - Recursion
 
 const returnSumRecursive = (inputArray) => {
-    let sum
-    if (inputArray.length === 0) {
-        return
+    if (inputArray.length === 1) {
+        return inputArray.pop();
     }
-    console.log(sum);
-    returnSumRecursive(sum += inputArray.pop);
+    // console.log('Input Array before:', inputArray);
+    let poppedValue = inputArray.pop();
+    // console.log('Input Array after:', inputArray);
+    // console.log('Popped Value:',poppedValue);
+    return poppedValue + returnSumRecursive(inputArray);
 }
 
-console.log(returnSumRecursive([1, 2, 3]))
+console.log(returnSumRecursive([1, 2, 3, 4, 5, 6]));
 // TODO: Run all tests on functions 1 & 2
+
+// notes 
+    // let sum = 0; 
+    // if (inputArray.length === 0) {
+    //     return
+    // }
+    // console.log(sum);
+    // console.log(inputArray);
+    // returnSumRecursive(sum += inputArray.pop);

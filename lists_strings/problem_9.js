@@ -13,11 +13,39 @@
 // 1 item and 3 items
 // 2 items and 3 items
 
+// .shift/.push method
 const concatLists = (listOne, listTwo) => {
-    let newList = listOne + ',' + listTwo;
+    let newList = [];    
+
+    while ((i = listOne.shift()) !== undefined ) {
+        // console.log(i);
+        newList.push(i);
+        // console.log(newList);
+    }
+
+    while ((i = listTwo.shift()) !== undefined ) {
+        // console.log(i);
+        newList.push(i);
+        // console.log(newList);
+    }
+
     return newList
 }
 
-console.log(concatLists([], [1]))
+console.log(concatLists([1, 2, 3], [4, 5, 6]))
 
-// TODO: If there are 0 items in listOne, how to get rid of the comma? (do we care?) 
+// Spread Syntax
+const concatListsSpread = (listOne, listTwo) => {
+    let newList = [...listOne, ...listTwo]; 
+    return newList
+}
+
+console.log(concatListsSpread([1, 2, 3], [4, 5, 6]))
+
+// .concat method
+const concatListsConcatMethod = (listOne, listTwo) => {
+    newList = listOne.concat(listTwo);
+    return newList
+}
+
+console.log(concatListsConcatMethod([1, 2, 3], [4, 5, 6]))

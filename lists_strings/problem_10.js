@@ -15,11 +15,10 @@ alternatingly taking elements, e.g. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
 // 2 items and 3 items
 
 // Using Math.min to find smallest list length
-
+ 
 const combineLists = (listOne, listTwo) => {
     let smallestListLength = Math.min(listOne.length, listTwo.length)
     console.log(smallestListLength)
-
 
     let combinedList = [];
 
@@ -30,18 +29,26 @@ const combineLists = (listOne, listTwo) => {
         console.log(combinedList)
     }
 
-    if (listOne.length > listTwo.length) {
+    console.log("after the for loop:", combinedList)
 
+    if (listOne.length > listTwo.length) {
+        remainderOne = (listOne.length - listTwo.length) + 2;
+        console.log("remainderOne", remainderOne);
+        for (i = remainderOne; i < listOne.length; i++) {
+            combinedList.push(listOne[i]);
+        }
     }
 
-    if (listOne.l)
-
-    console.log(combinedList)
+    if (listOne.length < listTwo.length) {
+        remainderTwo = (listTwo.length - listOne.length) + 2;
+        for (i = remainderTwo; i < listTwo.length; i++) {
+            combinedList.push(listTwo[i]);
+        }
+    }
     return combinedList
-
 }
 
-console.log(combineLists([1, 2], [3, 4]))
+console.log(combineLists(["a", "b", "c", "d"], [1, 2, 3, 4, 5]))
 //     return newList
 // }
 

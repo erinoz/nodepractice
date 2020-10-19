@@ -31,17 +31,28 @@ const mergeSortedLists = (listOne, listTwo) => {
     let pointerTwo = 0; 
     let i = 0;
 
-    while (pointerOne <= listOne.length && pointerTwo <= listTwo.length) {
-            if (pointerOne[i] < pointerTwo[i]) {
-                newList.push(pointerOne[i]);
-                console.log(newList);
+    console.log(listOne.length);
+    console.log(listTwo.length);
+
+    while (pointerOne < listOne.length && pointerTwo < listTwo.length) {
+        console.log(pointerOne);
+            if (pointerOne < pointerTwo) {
+                console.log("we/n're inside the if statement");
+                newList.push(listOne[pointerOne]);
+                i++;
+            } else if (pointerOne > pointerTwo) {
+                console.log("we/n're inside the second if statement");
+                newList.push(listTwo[pointerTwo]);
                 i++;
             } else {
-                newList.push(pointerTwo[i]);
-                console.log(newList);
+                newList.push(listOne[pointerOne]);
+                newList.push(listTwo[pointerTwo]);
+                console.log("we/n're inside the else statement");
                 i++;
             }
-
-        
+            // i had return newList here to make the loop stop from running forever, 
+            // but it's stopping the while loop before I want it to 
     }
 }
+
+console.log(mergeSortedLists([1, 4, 6], [2, 3, 5]))

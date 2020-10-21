@@ -17,7 +17,7 @@ concatenating them followed by a sort.
 // 1 item and 3 items
 // 2 items and 3 items
 
-// Loop over while pointer 1 is less than the length of the first array and pointer 2 is less than the length of the
+// Loop over `while` pointer 1 is less than the length of the first array and pointer 2 is less than the length of the
 // second Array
 
 // Evaluate each item to select the smaller one to push into the list 
@@ -29,30 +29,32 @@ const mergeSortedLists = (listOne, listTwo) => {
     let newList = []; 
     let pointerOne = 0;
     let pointerTwo = 0; 
-    let i = 0;
 
     console.log(listOne.length);
     console.log(listTwo.length);
 
     while (pointerOne < listOne.length && pointerTwo < listTwo.length) {
         console.log(pointerOne);
-            if (pointerOne < pointerTwo) {
-                console.log("we/n're inside the if statement");
+            if (listOne[pointerOne] <= listTwo[pointerTwo]) {
                 newList.push(listOne[pointerOne]);
-                i++;
-            } else if (pointerOne > pointerTwo) {
-                console.log("we/n're inside the second if statement");
+                pointerOne++; 
+            } else if (listOne[pointerOne] > listTwo[pointerTwo]) {
                 newList.push(listTwo[pointerTwo]);
-                i++;
-            } else {
-                newList.push(listOne[pointerOne]);
-                newList.push(listTwo[pointerTwo]);
-                console.log("we/n're inside the else statement");
-                i++;
-            }
-            // i had return newList here to make the loop stop from running forever, 
-            // but it's stopping the while loop before I want it to 
+                pointerTwo++;
+            } 
     }
+
+    while (pointerOne < listOne.length) {
+        newList.push(listOne[pointerOne]);
+        pointerOne++; 
+    } 
+
+    while (pointerTwo < listTwo.length) {
+        newList.push(listTwo[pointerTwo]);
+        pointerTwo++;
+    }
+
+    return newList;
 }
 
-console.log(mergeSortedLists([1, 4, 6], [2, 3, 5]))
+console.log(mergeSortedLists([1, 2, 3, 4, 5], [1, 3, 5, 7, 120]))

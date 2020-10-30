@@ -74,46 +74,34 @@ console.log(combineListsUsingRemainder(["a", "b", "c", "d"], [1, 2, 3, 4, 5]));
 // TODO - use Math.diff to find the difference and condense to one if statement - you'll still have to account for
 // which list is being selected and the long tail is getting added to the new list 
 
-
-
-//     return newList
+// const difference = (listOne.length, listTwo.length) => {
+//   return (listOne.length > listTwo.length) ? (listOne.length - listTwo.length) : (listTwo.length - listOne.length);
 // }
+  //let listLengthDifference = difference(listOne.length, listTwo.length); 
 
-// Cheating? with shift method
+const combineListsUsingMathAbs = (listOne, listTwo) => {
 
-// const combineLists = (listOne, listTwo) => {
-//     let combinedList = [];
+  let smallestListLength = Math.min(listOne.length, listTwo.length);
+  let listLengthDifference = Math.abs(listOne.length, listTwo.length)
+  
+  let combinedListThree = [];
+  let i;
 
-//     while (typeof listOne[0] !== "undefined" && typeof listTwo[0] !== "undefined") {
-//         combinedList += listOne.shift()
-//         combinedList += listTwo.shift()
+  for (i = 0; i < smallestListLength; i++) {
+    combinedListThree.push(listOne[i]);
+    combinedListThree.push(listTwo[i]);
+  }
 
-// }
+  if (listLengthDifference !== 0) {
+    for (; i < listOne.length; i++) {
+      combinedListThree.push(listOne[i]);
+    }
+    for (; i < listTwo.length; i++) {
+      combinedListThree.push(listTwo[i]);
+    }
+  }
 
-// evaluate if the full lists have been returned, if not, add the remainder of the longer list
-// to the end of the new array
+  return combinedListThree;
+};
 
-//     return combinedList
-// }
-
-// console.log(combineLists([1, 2, 3], [4, 5, 6]))
-
-// console.log(concatLists([], [1]))
-
-// const checkStringIsPalindrome = (str) => {
-//     let pointerOne = 0;
-//     let pointerTwo = str.length -1;
-
-//     while (pointerOne <= pointerTwo) {
-//         if (str.charAt(pointerOne) !== str.charAt(pointerTwo)) {
-//             return false
-//         }
-
-//         pointerOne++
-//         pointerTwo--
-//     }
-
-//     return true
-// }
-
-// console.log(checkStringIsPalindrome(str))
+console.log(combineListsUsingMathAbs(["a", "b", "c", "d"], [1, 2, 3, 4, 5]));

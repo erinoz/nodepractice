@@ -71,7 +71,7 @@ const combineListsUsingRemainder = (listOne, listTwo) => {
 
 console.log(combineListsUsingRemainder(["a", "b", "c", "d"], [1, 2, 3, 4, 5]));
 
-// TODO - use Math.diff to find the difference and condense to one if statement - you'll still have to account for
+// TODO - use Math.abs to find the difference and condense to one if statement - you'll still have to account for
 // which list is being selected and the long tail is getting added to the new list 
 
 // const difference = (listOne.length, listTwo.length) => {
